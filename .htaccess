@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# ===============================
+# Remove a extensão .php das URLs
+# ===============================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# ===============================
+# Rotas amigáveis
+# ===============================
+
+RewriteRule ^catracas$ /sccatraca/pages/catracas.php [L]
